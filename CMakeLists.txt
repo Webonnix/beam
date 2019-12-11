@@ -271,6 +271,8 @@ if(UNIX OR WIN32)
 endif()
 
 #Boost
+find_package(Boost 1.67.0 COMPONENTS system filesystem REQUIRED)
+include_directories(${Boost_INCLUDE_DIRS})
 
 set(BEAM_BOOST_COMPONENTS system filesystem program_options thread regex log locale)
 
